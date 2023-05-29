@@ -1,0 +1,73 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb-typescript"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.stories.*"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "no-console": 2,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "ignoredNodes": ["ConditionalExpression"]
+      }
+    ],
+    "linebreak-style": 2,
+    "no-empty": 2,
+    "no-irregular-whitespace": 2,
+    "no-param-reassign": 0,
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "no-confusing-arrow": 0,
+    "implicit-arrow-linebreak": 0,
+    "react/jsx-curly-newline": 0,
+    "object-curly-newline": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/destructuring-assignment": 0,
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": 0,
+    "operator-linebreak": 0,
+    "react/require-default-props": 0,
+    "@typescript-eslint/no-unnecessary-type-constraint": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-wrap-multilines": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/no-non-null-assertion": 0
+  }
+}
